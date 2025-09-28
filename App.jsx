@@ -4,7 +4,6 @@ import "./App.css"; // import styles
 const App = () => {
   const [randomString, setRandomString] = useState("");
 
-  // Function to generate random string
   const generateRandomString = useCallback(() => {
     const chars =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -15,7 +14,6 @@ const App = () => {
     setRandomString(result);
   }, []);
 
-  // Generate once when app loads
   useEffect(() => {
     generateRandomString();
   }, [generateRandomString]);
